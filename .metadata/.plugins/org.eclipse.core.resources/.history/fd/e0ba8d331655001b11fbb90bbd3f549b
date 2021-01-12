@@ -1,0 +1,11 @@
+package br.com.hfn.invest.domain;
+
+/**
+ * Financial asset quotation entity - Maps access to financial asset quotation data
+ * @author hefreita
+ *
+ */
+public class FinancialAssetQuotation {
+
+	
+}

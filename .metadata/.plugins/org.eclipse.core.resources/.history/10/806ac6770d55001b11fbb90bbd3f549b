@@ -1,0 +1,14 @@
+package br.com.hfn.invest.domain;
+
+import javax.persistence.Entity;
+
+/**
+ * Ticker Symbol entity - Identifies the company on the stock exchange
+ * @author hefreita
+ *
+ */
+@Entity
+public class TickerSymbol {
+
+	
+}

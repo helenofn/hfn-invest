@@ -1,0 +1,71 @@
+package br.com.hfn.invest.domain;
+
+import java.util.Date;
+
+import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+/**
+ * Primary key of the financial asset quotation entity 
+ * 
+ * @author hefreita
+ *
+ */
+@Embeddable
+public class FinancialAssetQuotationPK {
+
+	@ManyToOne
+	@JoinColumn(name = "ticker_symbol_id")
+	private FinancialAsset financialAsset;
+	private Date tradedDateTime;
+	
+	/**
+	 * @return the financialAsset
+	 */
+	public FinancialAsset getFinancialAsset() {
+		return financialAsset;
+	}
+	/**
+	 * @param financialAsset the financialAsset to set
+	 */
+	public void setFinancialAsset(FinancialAsset financialAsset) {
+		this.financialAsset = financialAsset;
+	}
+	/**
+	 * @return the tradedDateTime
+	 */
+	public Date getTradedDateTime() {
+		return tradedDateTime;
+	}
+	/**
+	 * @param tradedDateTime the tradedDateTime to set
+	 */
+	public void setTradedDateTime(Date tradedDateTime) {
+		this.tradedDateTime = tradedDateTime;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((financialAsset == null) ? 0 : financialAsset.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		FinancialAssetQuotationPK other = (FinancialAssetQuotationPK) obj;
+		if (financialAsset == null) {
+			if (other.financialAsset != null)
+				return false;
+		} else if (!financialAsset.equals(other.financialAsset))
+			return false;
+		return true;
+	}
+	
+}

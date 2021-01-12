@@ -1,0 +1,36 @@
+package br.com.hfn.invest.domain;
+
+import java.util.Date;
+
+import javax.persistence.EmbeddedId;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+/**
+ * Financial asset entity - Maps access to financial asset data - may be a stock, ação, fii, etc.. - assets traded on the stock exchange
+ * @author hefreita
+ *
+ */
+public class FinancialAsset {
+
+	@JsonIgnore
+	@EmbeddedId
+	private FinancialAssetPK id = new FinancialAssetPK();
+	
+	@ManyToOne
+	@JoinColumn(name = "company_id")
+	private Company company;
+	
+	@ManyToOne
+	@JoinColumn(name = "financial_asset_category_id")
+	private FinancialAssetCategory financialAssetCategory;
+	
+	private Date tradingDate;
+	
+	/**
+	 * Standard constructor
+	 */
+	public FinancialAsset() {}
+}

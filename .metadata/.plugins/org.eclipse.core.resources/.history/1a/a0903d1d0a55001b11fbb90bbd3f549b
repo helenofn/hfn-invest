@@ -1,0 +1,39 @@
+package br.com.hfn.invest.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+/**
+ * Company Entity - Maps access to company data
+ * @author hefreita
+ *
+ */
+@Entity
+public class Company {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private String name;
+	private String ein;
+	
+	public Company() {}
+
+	/**
+	 * Fast constructor and initialization
+	 * 
+	 * @param id : {@link Integer} - Identifies th company in a unique way
+	 * @param name : {@link String} - Company name
+	 * @param ein : {@link String} - Employer identifier number 
+	 */
+	public Company(Integer id, String name, String ein) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.ein = ein;
+	}
+	
+	
+}

@@ -1,0 +1,9 @@
+1610477593959	Rename package 'alphavantage'
+1610477616360	Rename package 'alphavantage.response.timeseries'
+1610477626131	Rename package 'alphavantage.response.quote'
+1610477634952	Rename package 'alphavantage.request.timeseries'
+1610477643910	Rename package 'alphavantage.request'
+1610477656095	Rename package 'alphavantage.exception'
+1610477742654	Delete element
+1610482826484	Rename type 'FinancialAssetQuotetion'
+1610482844528	Rename type 'FinancialAssetQuotetionPK'
