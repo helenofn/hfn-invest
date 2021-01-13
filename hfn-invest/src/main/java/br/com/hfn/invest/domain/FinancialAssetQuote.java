@@ -7,16 +7,16 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
 /**
- * Financial asset quotation entity - Maps access to financial asset quotation data
+ * Financial asset quote entity - Maps access to financial asset quote data
  * @author hefreita
  *
  */
 @Entity
-public class FinancialAssetQuotation implements Serializable{
+public class FinancialAssetQuote implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
-	private FinancialAssetQuotationPK id = new FinancialAssetQuotationPK();
+	private FinancialAssetQuotePK id = new FinancialAssetQuotePK();
 	
 	private Double openPrice;
 	private Double maxPrice;
@@ -27,7 +27,7 @@ public class FinancialAssetQuotation implements Serializable{
 	/**
 	 * Standard constructor
 	 */
-	public FinancialAssetQuotation() {}
+	public FinancialAssetQuote() {}
 
 	/**
 	 * Fast constructor and initialization
@@ -40,7 +40,7 @@ public class FinancialAssetQuotation implements Serializable{
 	 * @param price : {@link Double} - Price at the closing of the trading session
 	 * @param volume : {@link Double} - Number of trades of the trading session
 	 */
-	public FinancialAssetQuotation(FinancialAsset financialAsset, Date tradedDate, Double openPrice, Double maxPrice, Double minPrice, Double price, Long volume) {
+	public FinancialAssetQuote(FinancialAsset financialAsset, Date tradedDate, Double openPrice, Double maxPrice, Double minPrice, Double price, Long volume) {
 		super();
 		this.id.setFinancialAsset(financialAsset);
 		this.id.setTradedDate(tradedDate);
@@ -54,14 +54,14 @@ public class FinancialAssetQuotation implements Serializable{
 	/**
 	 * @return the id
 	 */
-	public FinancialAssetQuotationPK getId() {
+	public FinancialAssetQuotePK getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(FinancialAssetQuotationPK id) {
+	public void setId(FinancialAssetQuotePK id) {
 		this.id = id;
 	}
 
@@ -151,7 +151,7 @@ public class FinancialAssetQuotation implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FinancialAssetQuotation other = (FinancialAssetQuotation) obj;
+		FinancialAssetQuote other = (FinancialAssetQuote) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

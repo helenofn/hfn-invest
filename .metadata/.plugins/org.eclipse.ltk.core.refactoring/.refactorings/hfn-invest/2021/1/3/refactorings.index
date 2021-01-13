@@ -7,3 +7,5 @@
 1610477742654	Delete element
 1610482826484	Rename type 'FinancialAssetQuotetion'
 1610482844528	Rename type 'FinancialAssetQuotetionPK'
+1610546910573	Rename type 'FinancialAssetQuotation'
+1610546921801	Rename type 'FinancialAssetQuotationPK'

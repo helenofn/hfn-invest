@@ -8,13 +8,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- * Primary key of the financial asset quotation entity 
+ * Primary key of the financial asset quote entity 
  * 
  * @author hefreita
  *
  */
 @Embeddable
-public class FinancialAssetQuotationPK implements Serializable{
+public class FinancialAssetQuotePK implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@ManyToOne
@@ -61,7 +61,7 @@ public class FinancialAssetQuotationPK implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FinancialAssetQuotationPK other = (FinancialAssetQuotationPK) obj;
+		FinancialAssetQuotePK other = (FinancialAssetQuotePK) obj;
 		if (financialAsset == null) {
 			if (other.financialAsset != null)
 				return false;
