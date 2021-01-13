@@ -1,9 +1,8 @@
-
 HELP.md
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
-### STS ###
+### STS ####
 .apt_generated
 .classpath
 .factorypath
@@ -11,7 +10,7 @@ HELP.md
 .settings
 .springBeans
 .sts4-cache
-.metadata/*
+/metadata/
 
 ### IntelliJ IDEA ###
 .idea
